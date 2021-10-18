@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  router: { base: '/polygon-ethereum-nextjs-marketplace/' },
+  basePath: '/polygon-ethereum-nextjs-marketplace/' ,
 }
