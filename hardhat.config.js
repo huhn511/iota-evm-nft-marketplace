@@ -1,11 +1,18 @@
 require("@nomiclabs/hardhat-waffle");
-const fs = require('fs');
-// const privateKey = fs.readFileSync(".secret").toString().trim() || "01234567890123456789";
-// const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
+require("dotenv").config();
+
+const privateKey = process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
+
 
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
+    iscp: {
+      url: "https://evm.wasp.sc.iota.org",
+      chainId: 1074,
+      accounts: privateKey,
+      timeout: 60000
+    },
     hardhat: {
       chainId: 1337
     },

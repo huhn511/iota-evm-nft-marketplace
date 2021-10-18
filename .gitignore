@@ -4,6 +4,8 @@
 .infuraid
 config.js
 
+.env
+
 # dependencies
 /node_modules
 /.pnp
