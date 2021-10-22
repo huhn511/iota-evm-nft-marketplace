@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  basePath: '/polygon-ethereum-nextjs-marketplace' ,
+  basePath: '/iota-evm-nft-marketplace' ,
 }
