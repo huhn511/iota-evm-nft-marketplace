@@ -49,7 +49,7 @@ export default function MyAssets() {
         console.log("listingPrice", listingPrice)
         listingPrice = listingPrice.toString()
         console.log("listingPrice2", listingPrice)
-        
+
         const data = await contract.fetchMarketItems()
         console.log("data", data)
 
@@ -97,15 +97,17 @@ export default function MyAssets() {
             let token_index = i.toNumber()
             console.log("token_index:", token_index)
             console.log("token_index2:", token_index.toString())
-            // const headers = {
-            //     'Access-Control-Allow-Origin': '*',
-            //     'Content-Type': 'application/json',
-            // };
+
+
             // const token = await tokenContract.tokenByIndex("4")
 
-            const meta = await axios.get("api/" + token_index + ".json", {})
+            const url = `https://assets.iotabots.io/${token_index}`
+            const meta = await axios.get(url)
+
+        
             //   let price = ethers.utils.formatUnits(i.price.toString(), 'ether')
             console.log("meta:", meta)
+
             let date = new Date(meta.data.date)
             let item = {
                 // tokenId: i.tokenId.toNumber(),
