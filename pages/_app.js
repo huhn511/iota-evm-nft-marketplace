@@ -27,6 +27,11 @@ function Marketplace({ Component, pageProps }) {
               Creator Dashboard
             </a>
           </Link>
+          <Link href="/iotabots">
+            <a className="mr-6 text-pink-500">
+              IOTABOTS
+            </a>
+          </Link>
         </div>
       </nav>
       <Component {...pageProps} />
